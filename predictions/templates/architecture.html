@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Plant Disease Detection Architecture{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-6 hero-content">
+                <h1 class="display-4 fw-bold">InceptionV3 for Plant Disease Detection</h1>
+                <p class="lead">Leveraging advanced deep learning technology to revolutionize agricultural disease management.</p>
+                <div class="hero-buttons">
+                    <a href="#features" class="btn btn-primary btn-lg">Explore Features</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <img src="{% static 'myapp/images/arch.jpeg' %}" alt="Plant Disease Detection" class="hero-image">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Key Features Section -->
+<section id="features">
+    <div class="container">
+        <h2 class="section-title">Key Features</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card-wrapper">
+                    <i class="fas fa-microscope feature-icon"></i>
+                    <h3>High Precision Detection</h3>
+                    <p>Advanced image processing algorithms for accurate disease identification.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-wrapper">
+                    <i class="fas fa-bolt feature-icon"></i>
+                    <h3>Real-time Analysis</h3>
+                    <p>Get instant results with our optimized model.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-wrapper">
+                    <i class="fas fa-mobile-alt feature-icon"></i>
+                    <h3>Mobile Compatible</h3>
+                    <p>Use our system directly from your smartphone.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Architecture Overview -->
+<section id="architecture" class="bg-light">
+    <div class="container">
+        <h2 class="section-title">Architecture Overview</h2>
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="card-wrapper">
+                    <h3>Feature Extraction</h3>
+                    <ul>
+                        <li>Inception modules for multi-scale processing</li>
+                        <li>Transfer learning from ImageNet</li>
+                        <li>Optimized convolution patterns</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-wrapper">
+                    <h3>Model Enhancement</h3>
+                    <ul>
+                        <li>Custom fully connected layers</li>
+                        <li>Dropout regularization (0.5)</li>
+                        <li>Batch normalization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card-wrapper">
+                    <h3>Training Pipeline</h3>
+                    <ul>
+                        <li>Dynamic learning rate scheduling</li>
+                        <li>Data augmentation techniques</li>
+                        <li>Early stopping mechanism</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Performance Metrics -->
+<section id="metrics">
+    <div class="container">
+        <h2 class="section-title">Performance Metrics</h2>
+        <div class="row g-4">
+            {% for metric in metrics %}
+            <div class="col-md-3">
+                <div class="card-wrapper text-center">
+                    <div class="metric-value">{{ metric.value }}</div>
+                    <div class="metric-label">{{ metric.label }}</div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Model Visualization -->
+<section id="visualization" class="bg-light">
+    <div class="container">
+        <h2 class="section-title">Model Performance</h2>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card-wrapper">
+                    <h3>Training Accuracy</h3>
+                    <div class="chart-container">
+                        <img src="{% static 'myapp/images/accuracy_plot.jpg' %}" alt="Training Accuracy" class="img-fluid">
+                    </div>
+                    <p class="chart-caption">Model accuracy over training epochs</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card-wrapper">
+                    <h3>Training Loss</h3>
+                    <div class="chart-container">
+                        <img src="{% static 'myapp/images/loss_plot.jpg' %}" alt="Training Loss" class="img-fluid">
+                    </div>
+                    <p class="chart-caption">Model loss reduction during training</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Base Styles */
+    :root {
+        --primary-color: #007bff;
+        --text-color: #2c3e50;
+        --light-bg: #f8f9fa;
+        --border-radius: 10px;
+        --box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    /* Common Section Styles */
+    section {
+        padding: 5rem 0;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: var(--text-color);
+        font-weight: 700;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        background: linear-gradient(135deg, var(--light-bg) 0%, #e9ecef 100%);
+        padding: 6rem 0;
+    }
+
+    .hero-image {
+        max-width: 100%;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+    }
+
+    /* Card Styles */
+    .card-wrapper {
+        background: white;
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+        height: 100%;
+        transition: transform 0.3s ease;
+    }
+
+    .card-wrapper:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Feature Icons */
+    .feature-icon {
+        font-size: 2.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1.5rem;
+    }
+
+    /* Metrics */
+    .metric-value {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--primary-color);
+    }
+
+    .metric-label {
+        color: #6c757d;
+        margin-top: 0.5rem;
+    }
+
+    /* Charts */
+    .chart-container {
+        margin: 1rem 0;
+        padding: 1rem;
+        background: var(--light-bg);
+        border-radius: var(--border-radius);
+    }
+
+    .chart-caption {
+        text-align: center;
+        color: #6c757d;
+        margin-top: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .hero-section {
+            padding: 3rem 0;
+        }
+        
+        .hero-content {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    }
+</style>
+{% endblock %}

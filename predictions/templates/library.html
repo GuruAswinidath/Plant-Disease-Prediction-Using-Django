@@ -1,0 +1,290 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Library{% endblock %}
+
+{% block content %}
+  <!-- Search Bar -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Plant Disease Library</h2>
+        <p class="lead">Find detailed information on various plant diseases, their symptoms, treatments, and prevention methods.</p>
+        <input type="text" id="searchInput" class="form-control" placeholder="Search for a disease..." onkeyup="searchDisease()">
+      </div>
+    </div>
+  </div>
+
+  <!-- Disease List Section -->
+  <div class="container mt-5">
+    <div class="row" id="diseaseList">
+      <!-- Disease 1 -->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="{% static 'myapp/images/li-1.webp'%}" alt="Disease 1" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Powdery Mildew</h4>
+            <p class="card-text">A fungal disease that affects many plants, causing a white powdery coating on leaves and stems.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Apply fungicide like sulfur or neem oil.</li>
+              <li>Remove infected leaves.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Ensure proper spacing between plants for air circulation.</li>
+              <li>Water at the base of plants to avoid wetting the leaves.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disease 2 -->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="{% static 'myapp/images/li-2.webp'%}" alt="Disease 2" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Leaf Spot</h4>
+            <p class="card-text">A bacterial or fungal infection that causes spots on the leaves, leading to yellowing and early leaf drop.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Use copper-based fungicides or bactericides.</li>
+              <li>Prune affected leaves and dispose of them properly.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Water in the morning to allow leaves to dry before nightfall.</li>
+              <li>Ensure proper spacing for air circulation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disease 3 -->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="{% static 'myapp/images/li-3.jpg' %}" alt="Disease 3" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Blight</h4>
+            <p class="card-text">A disease caused by various fungi or bacteria that affects leaves, stems, and fruits, causing rapid tissue decay.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Apply fungicides or bactericides specific to the cause of the blight.</li>
+              <li>Remove infected plants and debris.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Practice crop rotation to avoid soil-borne pathogens.</li>
+              <li>Water plants at the base to avoid wetting the foliage.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disease 4 -->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="{% static 'myapp/images/li-4.jpg'%}" alt="Disease 4" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Root Rot</h4>
+            <p class="card-text">A disease caused by fungi or bacteria that attack the roots, causing the plant to wilt and eventually die.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Remove infected plants and dispose of them properly.</li>
+              <li>Use a fungicide for root rot treatment.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Ensure proper drainage in the soil.</li>
+              <li>Avoid over-watering plants.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disease 5 -->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="{% static 'myapp/images/li-5.webp'%}" alt="Disease 5" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Rust</h4>
+            <p class="card-text">A fungal disease characterized by reddish-brown spots on the leaves, causing the plant to weaken.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Apply fungicides such as copper-based or systemic fungicides.</li>
+              <li>Remove and destroy infected leaves.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Practice crop rotation to avoid rust build-up.</li>
+              <li>Ensure good air circulation around plants.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disease 6 -->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="{%static 'myapp/images/li-6.jpg'%}" alt="Disease 6" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Anthracnose</h4>
+            <p class="card-text">A fungal disease that affects fruits, flowers, and stems, causing dark lesions and dieback.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Use fungicides to control the spread.</li>
+              <li>Remove infected plant parts and destroy them.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Water plants early in the day.</li>
+              <li>Provide good airflow to reduce moisture levels.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disease 7-->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="{% static 'myapp/images/apple_scab.jpg' %}" alt="Apple Scab" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Apple Scab</h4>
+            <p class="card-text">A fungal disease that affects apples, causing dark, scabby lesions on fruit and leaves.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Apply fungicides like captan or mancozeb.</li>
+              <li>Prune infected branches and dispose of fallen leaves.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Plant resistant apple varieties.</li>
+              <li>Ensure good air circulation through proper pruning.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Disease 8 -->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="{% static 'myapp/images/coffee_rust.jpeg' %}" alt="Coffee Rust" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Coffee Rust</h4>
+            <p class="card-text">A fungal disease that causes yellow spots on leaves, leading to defoliation and reduced coffee yield.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Apply systemic fungicides such as triazoles.</li>
+              <li>Remove and destroy infected leaves.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Plant rust-resistant coffee varieties.</li>
+              <li>Maintain optimal soil fertility for stronger plants.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Disease 9 -->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="{% static 'myapp/images/tomato_early_blight.jpg' %}" alt="Tomato Early Blight" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Tomato Early Blight</h4>
+            <p class="card-text">A fungal disease that causes dark spots on leaves, stems, and fruit, weakening the plant.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Apply fungicides such as chlorothalonil or copper-based sprays.</li>
+              <li>Remove infected plant material.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Rotate crops to reduce fungal spores in the soil.</li>
+              <li>Water at the base of plants to avoid leaf wetting.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Disease 10 -->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="{% static 'myapp/images/peach_bacterial_spot.jpg' %}" alt="Peach Bacterial Spot" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Peach Bacterial Spot</h4>
+            <p class="card-text">A bacterial disease that causes dark spots on leaves and fruit, reducing peach quality.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Use copper-based bactericides during early stages.</li>
+              <li>Remove and dispose of infected fruit and leaves.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Plant resistant peach varieties.</li>
+              <li>Provide adequate airflow around trees by proper pruning.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Disease 11 -->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="{% static 'myapp/images/corn_common_rust.jpg' %}" alt="Corn Common Rust" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Corn Common Rust</h4>
+            <p class="card-text">A fungal disease that produces rust-colored pustules on corn leaves, reducing yield.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Apply fungicides like propiconazole or pyraclostrobin.</li>
+              <li>Remove infected leaves if possible.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Plant resistant corn varieties.</li>
+              <li>Practice crop rotation to avoid fungal build-up in soil.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Disease 12-->
+      <div class="col-md-4 disease-item">
+        <div class="card p-3 shadow">
+          <img src="{% static 'myapp/images/grape_black_rot.jpeg' %}" alt="Grape Black Rot" class="card-img-top">
+          <div class="card-body">
+            <h4 class="card-title">Grape Black Rot</h4>
+            <p class="card-text">A fungal disease that causes black spots on grapes, leaves, and stems, leading to crop loss.</p>
+            <h5>Treatment:</h5>
+            <ul>
+              <li>Apply fungicides such as mancozeb or myclobutanil.</li>
+              <li>Remove and destroy infected plant material.</li>
+            </ul>
+            <h5>Prevention:</h5>
+            <ul>
+              <li>Prune vines to improve airflow and sunlight exposure.</li>
+              <li>Use fungicide sprays during wet seasons.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <style>
+    .card {
+      height: 100%;
+    }
+
+    .card-img-top {
+      max-height: 200px;
+      object-fit: cover;
+    }
+
+    .disease-item {
+      margin-bottom: 30px;
+    }
+  </style>
+<script src="{% static 'myapp/js/script.js' %}"></script>
+{% endblock %}

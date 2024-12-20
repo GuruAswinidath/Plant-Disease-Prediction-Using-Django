@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col-md-12 text-center mb-4">
+    <h1>About Plant Disease Prediction</h1>
+    <p class="lead">Discover how modern technology helps in identifying plant diseases and promoting sustainable farming practices. By using cutting-edge tools like AI and machine learning, we provide a solution for healthier crops, better yields, and eco-friendly agricultural practices.</p>
+  </div>
+</div>
+
+<div class="container mb-5">
+    <div class="row mt-3">
+    <div class="col-md-6">
+        <img src="{% static 'myapp/images/about-2.jpg' %}" alt="Plant Disease Prediction" class="img-fluid rounded shadow" style="max-width: 400px; margin-left: 150px;">
+    </div>
+    <div class="col-md-6 mt-2">
+        <h2>What is Plant Disease Prediction?</h2>
+        <p>
+        Plant Disease Prediction involves the use of advanced technologies like machine learning, artificial intelligence (AI), and image processing to identify diseases in crops. Through the analysis of images of plants and their symptoms, these systems can detect and classify various plant diseases accurately. With continuous data analysis, the system can pinpoint problems early, preventing widespread damage and ensuring the best care for the crops.
+        </p>
+        <p>
+        Early detection of plant diseases is crucial for minimizing yield losses and ensuring the long-term health of crops. With accurate predictions, farmers can make informed decisions about treatment, reducing unnecessary pesticide use, and fostering sustainable agricultural practices that help protect the environment.
+        </p>
+    </div>
+    </div>
+</div>
+
+<div class="container mt-3 mb-5">
+    <div class="row mt-5">
+        <div class="col-md-12 text-center">
+            <h2>Key Features</h2>
+        </div>
+
+        <div class="col-md-4 text-center mb-4">
+            <div class="card p-3 shadow d-flex flex-column" style="height: 100%;">
+                <img src="{% static 'myapp/images/about-1.jpg'%}" alt="Accurate Diagnosis" class="card-img-top" style="max-height: 200px; object-fit: cover;">
+                <h4>Accurate Diagnosis</h4>
+                <p>Advanced image analysis and AI algorithms ensure precise identification of plant diseases, even at early stages. This helps in avoiding unnecessary treatments and addressing issues before they spread.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center mb-4">
+            <div class="card p-3 shadow d-flex flex-column" style="height: 100%;">
+                <img src="{% static 'myapp/images/about-3.png'%}" alt="Real-Time Monitoring" class="card-img-top" style="max-height: 200px; object-fit: cover;">
+                <h4>Real-Time Monitoring</h4>
+                <p>Stay ahead of potential threats with real-time data monitoring. This enables proactive decision-making and allows farmers to detect early signs of disease and track plant health over time.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 text-center mb-4">
+            <div class="card p-3 shadow d-flex flex-column" style="height: 100%;">
+                <img src="{% static 'myapp/images/about-4.jpg'%}" alt="Cost-Effective" class="card-img-top" style="max-height: 200px; object-fit: cover;">
+                <h4>Cost-Effective</h4>
+                <p>By identifying diseases early, the platform reduces the need for expensive treatments. Less pesticide usage also means cost savings and a smaller environmental footprint, benefiting both farmers and the planet.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Call to Action Section -->
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-4">
+            <img src="{% static 'myapp/images/services-1.png'%}" alt="Sustainable Farming" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-8 text-center mt-3">
+            <h2>Get Started</h2>
+            <p>
+                Join us in advancing sustainable farming practices with the help of modern technology. Our services provide an intuitive, easy-to-use platform that equips you with the tools to protect your crops, save resources, and promote a healthier environment. Explore our services to learn how we can help you transform your farming practices and make a positive impact on the future of agriculture.
+            </p>
+            <a href="{% url 'services'%}" class="btn btn-success btn-lg">Explore Services</a>
+        </div>
+    </div>
+</div>
+
+<!-- Additional Information Section -->
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-4 order-md-2">
+            <img src="{% static 'myapp/images/about-5.jpg'%}" alt="Plant Disease Resources" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-md-8 text-center order-md-1 mt-5">
+            <h3>Discover Our Resources</h3>
+            <p>
+                We provide a comprehensive library of plant diseases and their corresponding treatments. Our resources include detailed information about symptoms, causes, and effective solutions, including prescription medicines. This allows you to gain a deeper understanding of plant health, enabling better care and protection for your crops.
+            </p>
+            <a href="{% url 'library'%}" class="btn btn-primary btn-lg">Visit Library</a>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div class="container mt-5 mb-5">
+    <div class="row">
+    <div class="col-md-12 text-center">
+        <h3>Need More Information?</h3>
+        <p>
+        If you have questions or need additional assistance, our team is ready to help! We are committed to providing support for plant disease prediction, sustainable farming practices, and any other inquiries you may have. Contact us for personalized guidance and information.
+        </p>
+        <a href="{% url 'contact'%}" class="btn btn-outline-secondary btn-lg">Contact Us</a>
+    </div>
+    </div>
+</div>
+
+<!-- Newsletter Section -->
+<div class="container mt-5 p-5 mb-3">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3>Subscribe to Our Newsletter</h3>
+        <p>To stay updated with the latest advancements in plant disease prediction, sustainable farming practices, and innovations in agricultural technology,<br> click the button below to fill out the subscription form.</p>
+        <a href="{% url 'form' %}" class="btn btn-primary mt-3">Subscribe Now</a>
+      </div>
+    </div>
+  </div>  
+
+{% endblock %}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <!-- Load static files -->
+    {% load static %}
+    <link href="{% static 'myapp/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="{% static 'myapp/css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="text-center mt-5">
+        <div class="mb-4 mt-5">
+            <img src="{% static 'myapp/images/landing.jpg' %}" alt="nature" class="img-fluid">
+        </div>
+
+        <div>
+            <h1>Welcome to My Project</h1>
+            <h4>
+                <a href="{% url 'about' %}" class="text-decoration-none">Let's Start</a>
+            </h4>
+            <div class="container mt-5">
+                <h2>Presenting by</h2>
+                <p>Name: <strong>Guru Aswini Dath</strong></p>
+                <p>Roll Number: <strong>AM.EN.U4AIE21023</strong></p>
+                <p>Affiliation: <strong>Department of Computer Science Engineering spelication Artificial Intelligence</strong></p>
+                <p>College: <strong>Amrita Vishwa Vidyapeetham</strong></p>
+                <p>Address: <strong>Kollam, Kerala</strong></p>
+                <p>Email: <strong><a href="mailto:guruaswinidath25@gmail.com">guruaswinidath25@gmail.com</a></strong></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Our Services{% endblock %}
+
+{% block content %}
+<!-- Main Content -->
+<div class="container mt-5">
+  <div class="row">
+    <!-- Introduction Section -->
+    <div class="col-md-12 text-center mb-4">
+      <h1>Our Services</h1>
+      <p class="lead">
+        Explore our cutting-edge solutions that harness the power of Artificial Intelligence (AI) and Machine Learning (ML) to revolutionize agriculture, enhance productivity, and promote sustainable farming.
+      </p>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <div class="row">
+    <!-- Service 1 -->
+    <div class="col-md-4 text-center">
+      <div class="card p-3 shadow d-flex flex-column h-100">
+        <h3>Sustainable Agriculture</h3>
+        <p>
+          Our AI-driven tools assist farmers in adopting sustainable practices by monitoring crop health, reducing chemical pesticide usage, and optimizing natural resources, all while protecting the environment.
+        </p>
+      </div>
+    </div>
+    <!-- Service 2 -->
+    <div class="col-md-4 text-center">
+      <div class="card p-3 shadow d-flex flex-column h-100">
+        <h3>Smart Irrigation Systems</h3>
+        <p>
+          Our intelligent irrigation solutions analyze real-time soil data and weather forecasts to help conserve water while ensuring crops receive the exact amount they need to thrive.
+        </p>
+      </div>
+    </div>
+    <!-- Service 3 -->
+    <div class="col-md-4 text-center">
+      <div class="card p-3 shadow d-flex flex-column h-100">
+        <h3>Plant Disease Diagnosis</h3>
+        <p>
+          Detect plant diseases early with AI-powered image analysis. Our advanced system ensures timely intervention and prevents large-scale crop damage, enhancing productivity and profitability.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <!-- Service 4 -->
+    <div class="col-md-4 text-center">
+      <div class="card p-3 shadow d-flex flex-column h-100">
+        <h3>Yield Prediction</h3>
+        <p>
+          Forecast your crop yields with remarkable accuracy using our machine learning algorithms. Our tools analyze historical trends, weather data, and soil conditions to help you plan effectively.
+        </p>
+      </div>
+    </div>
+    <!-- Service 5 -->
+    <div class="col-md-4 text-center">
+      <div class="card p-3 shadow d-flex flex-column h-100">
+        <h3>Automated Pest Control</h3>
+        <p>
+          Combat pests intelligently with AI-enabled drones and sensors. These tools identify infestations early and deploy targeted solutions, reducing chemical use and safeguarding the ecosystem.
+        </p>
+      </div>
+    </div>
+    <!-- Service 6 -->
+    <div class="col-md-4 text-center">
+      <div class="card p-3 shadow d-flex flex-column h-100">
+        <h3>Data-Driven Advisory</h3>
+        <p>
+          Make informed decisions with real-time insights and tailored recommendations. Our data-driven tools provide actionable advice for improving efficiency and adopting best practices in farming.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Upload Plant Image Section -->
+  <div class="row mt-5">
+    <div class="col-md-12 text-center">
+      <h2>Find Plant Diseases by Uploading an Image</h2>
+      <p class="lead">
+        Upload a high-quality image of your plant, and our AI will analyze it to detect potential diseases, provide diagnoses, and recommend appropriate remedies for effective treatment.
+      </p>
+      <a href="{% url 'prediction' %}" class="btn btn-primary btn-lg" onclick="return checkLogin()">Detect Disease</a>
+    </div>
+  </div>
+
+  <!-- Call to Action Section -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Ready to Transform Your Farm?</h2>
+        <p>
+          Partner with us to embrace the future of agriculture. Whether it's disease prediction, smart irrigation, or yield forecasting, we're committed to helping you achieve greater efficiency and sustainability.
+        </p>
+        <a href="{% url 'contact' %}" class="btn btn-success btn-lg">Contact Us Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
